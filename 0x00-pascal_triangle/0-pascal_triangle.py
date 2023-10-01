@@ -2,7 +2,6 @@
 """
 Defines pascal_triangle
 """
-from math import factorial
 
 
 def pascal_triangle(n):
@@ -24,3 +23,13 @@ def pascal_triangle(n):
                 inner_list.append(1)
         outer_list.append(inner_list)
     return outer_list
+
+
+def factorial(n):
+    """
+    Computes the factorial of a given number n
+    """
+    if n <= 1:
+        return 1
+
+    return n * factorial(n - 1)
