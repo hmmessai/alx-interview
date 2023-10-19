@@ -6,13 +6,23 @@ import sys
 
 lines = sys.stdin
 
+
 def read_n_lines(n):
+    """Reads the given amount of lines from stdin"""
     return [sys.stdin.readline().rstrip() for _ in range(n)]
+
 
 while lines:
     totalSize = 0
     count = 0
-    codes = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
+    codes = {'200': 0,
+             '301': 0,
+             '400': 0,
+             '401': 0,
+             '403': 0,
+             '404': 0,
+             '405': 0,
+             '500': 0}
     lines = read_n_lines(10)
     while count < 10:
         line = lines[count]
