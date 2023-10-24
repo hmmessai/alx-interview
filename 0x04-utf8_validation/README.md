@@ -9,4 +9,4 @@ In this project I tried to come up with the solution of the utf8 validation prob
 ### Files
 
 - [0-validate_utf8.py](./0-validate_utf8.py): Contains a method that checks if a given data(list of numbers which are supposed to represent utf8 character) is a valid UTF-8 encoding or not.
-- - - hello
+	- hello
