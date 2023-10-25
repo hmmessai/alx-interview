@@ -4,6 +4,7 @@ Define method validUTF8
 """
 from typing import List
 
+
 def validUTF8(data: List[int]) -> bool:
     """
     data: a list of integers
