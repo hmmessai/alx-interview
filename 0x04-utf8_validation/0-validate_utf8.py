@@ -4,30 +4,26 @@ Define method validUTF8
 """
 from typing import List
 
-
 def validUTF8(data: List[int]) -> bool:
-    """Determines if a given data set represents a valid
-    utf-8 encoding
     """
-    for no in data:
-        binary = bin(no)
-        for idx, x in enumerate(binary):
-            if idx >= 2 and idx <= 6:
-                if x == '0':
-                    break
-                if idx == 6:
-                    if x == '1':
-                        return False
+    data: a list of integers
+    Return: True if data is a valid UTF-8
+    encoding, else return False
+    """
+    byte_count = 0
 
-
-        """if x == 0 and x == 1:
-                continue
-            if x != 6:
-                if y == '1':
-                    continue
-                elif y == '0':
-                    break
-            if y == '1':
+    for i in data:
+        if byte_count == 0:
+            if i >> 5 == 0b110 or i >> 5 == 0b1110:
+                byte_count = 1
+            elif i >> 4 == 0b1110:
+                byte_count = 2
+            elif i >> 3 == 0b11110:
+                byte_count = 3
+            elif i >> 7 == 0b1:
                 return False
-                """
-    return True
+        else:
+            if i >> 6 != 0b10:
+                return False
+            byte_count -= 1
+    return byte_count == 0
