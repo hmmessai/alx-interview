@@ -11,9 +11,8 @@ Usage:
 - The program prints every possible solution to the problem
 
 Format: 
-```
-	ubuntu@ubuntu:~/0x05-nqueens$ ./0-nqueens.py 4
-	
-	[[0, 1], [1, 3], [2, 0], [3, 2]]
-	[[0, 2], [1, 0], [2, 3], [3, 1]]
+```	
+ubuntu@ubuntu:~/0x05-nqueens$ ./0-nqueens.py 4	
+[[0, 1], [1, 3], [2, 0], [3, 2]]
+[[0, 2], [1, 0], [2, 3], [3, 1]]
 ```
