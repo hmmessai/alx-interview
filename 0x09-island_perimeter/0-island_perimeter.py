@@ -2,6 +2,7 @@
 """Define island perimeter
 """
 
+
 def island_perimeter(grid):
     """Computes perimeter of the grid
     """
@@ -17,7 +18,7 @@ def island_perimeter(grid):
             if grid[row][i] == 1:
                 if grid[row][i-1] == 1:
                     connections += 2
-                if grid[row - 1][i] == 1: 
+                if grid[row - 1][i] == 1:
                     connections += 2
 
     return (totPerim - connections)
