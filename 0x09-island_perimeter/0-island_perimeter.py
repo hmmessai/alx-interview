@@ -9,17 +9,6 @@ def island_perimeter(grid):
     totPerim = 0
     connections = 0
 
-    for row in range(len(grid)):
-        for i in range(len(grid[row])):
-            if grid[row][i] == 1:
-                if grid[row][i-1] == 1 or\
-                   grid[row][i+1] == 1 or\
-                   grid[row-1][i] == 1 or\
-                   grid[row+1][i] == 1:
-                       pass
-                else:
-                    return 0
-
     for row in grid:
         for col in row:
             if col == 1:
